@@ -1,0 +1,199 @@
+/*
+* Variant: Rosé Pine
+* Maintainer: DankChoir
+*/
+
+@define-color base            #191724;
+@define-color surface         #1f1d2e;
+@define-color overlay         #26233a;
+
+@define-color muted           #6e6a86;
+@define-color subtle          #908caa;
+@define-color text            #e0def4;
+
+@define-color love            #eb6f92;
+@define-color gold            #f6c177;
+@define-color rose            #ebbcba;
+@define-color pine            #31748f;
+@define-color foam            #9ccfd8;
+@define-color iris            #c4a7e7;
+
+@define-color highlightLow    #21202e;
+@define-color highlightMed    #403d52;
+@define-color highlightHigh   #524f67;
+
+
+* {
+  font-family: Material Design Icons, JetBrainsMono Nerd Font;
+  font-size: 20px;
+  font-weight: bolder;
+}
+
+window#waybar {
+  background: @base;
+  color: @text;
+}
+
+window#waybar.hidden {
+  opacity: 0.1;
+}
+
+#clock,
+#tray,
+#mode,
+#custom-lock,
+#idle_inhibitor,
+#backlight,
+#pulseaudio,
+#mpd,
+#mpris{
+}
+
+#cpu {
+  color: @foam;
+}
+#memory {
+  color: @iris;
+}
+
+#backlight {
+  color: @love;
+}
+
+#memory,
+#cpu,
+#backlight,
+#pulseaudio,
+#battery,
+#mpris,
+#network {
+  padding: 10px;
+}
+
+#workspaces button {
+  border: none;
+  color: @text;
+  font-weight: bolder;
+  margin: 5px;
+  background: transparent;
+  box-shadow: none;
+}
+
+#workspaces button:hover {
+  background-color: @love;
+  color: @text;
+}
+
+#workspaces button.focused {
+  background-color: @love;
+  color: @base;
+}
+
+#workspaces button.urgent {
+  background-color: @gold;
+}
+
+#workspaces button.persistent {
+  color: #a9ac88;
+}
+
+#workspaces button.active:hover,
+#workspaces button.urgent:hover {
+  background: inherit;
+}
+
+#workspaces,
+#custom-ibus,
+#clock,
+#backlight,
+#battery,
+#cpu,
+#memory,
+#pulseaudio,
+#custom-powermenu,
+#tray,
+#network,
+#mpd,
+#mpris{
+  background-color: @base;
+  margin: 10px 0px;
+}
+
+#pulseaudio {
+  /*color: #268bd2;*/
+  color: @gold;
+  /*margin-left: -5px;*/
+}
+#mpris{
+  color: @rose;
+}
+#mpd{
+  color: #d9c793;
+}
+
+#pulseaudio.muted {
+  color: #fb958b;
+}
+
+#backlight {
+  /*color: #8a909e;*/
+  margin-right: 0px;
+}
+
+#network {
+  color: @rose;
+}
+
+#network.disconnected {
+  color: #fb958b;
+}
+
+#custom-powermenu {
+  color: #e78284;
+}
+
+#battery {
+  color: @pine;
+}
+
+#battery.critical,
+#battery.warning,
+#battery.full,
+#battery.plugged {
+  color: #91ffc3;
+}
+
+#battery.charging {
+  color: #87bb82;
+}
+
+#battery.full,
+#battery.plugged {
+}
+
+#battery.warning {
+  color: #ecd3a0;
+}
+
+#battery.critical:not(.charging) {
+  color: #fb958b;
+}
+
+#clock {
+  color: #ffffff;
+  font-family: JetBrainsMono Nerd Font;
+  font-weight: bolder;
+}
+
+tooltip {
+  border-radius: 8px;
+  background-color: #131822;
+}
+
+tooltip label {
+  background-color: #131822;
+}
+
+label:focus {
+  background-color: #131822;
+}
