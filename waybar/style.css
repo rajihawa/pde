@@ -25,12 +25,12 @@
 
 * {
   font-family: Material Design Icons, JetBrainsMono Nerd Font;
-  font-size: 20px;
+  font-size: 16px;
   font-weight: bolder;
 }
 
 window#waybar {
-  background: @base;
+  background: transparent;
   color: @text;
 }
 
@@ -67,14 +67,12 @@ window#waybar.hidden {
 #battery,
 #mpris,
 #network {
-  padding: 10px;
 }
 
 #workspaces button {
   border: none;
   color: @text;
   font-weight: bolder;
-  margin: 5px;
   background: transparent;
   box-shadow: none;
 }
@@ -116,7 +114,21 @@ window#waybar.hidden {
 #mpd,
 #mpris{
   background-color: @base;
-  margin: 10px 0px;
+  margin: 0px 5px;
+  border-radius: 8px;
+  padding: 5px;
+}
+#cpu, #backlight {
+	margin-right: 0px;
+	border-radius: 8px 0px 0px 8px;
+}
+#battery {
+	margin: 0px;
+	border-radius: 0px;
+}
+#memory, #pulseaudio {
+	margin-left: 0px;
+	border-radius: 0px 8px 8px 0px;
 }
 
 #pulseaudio {
@@ -137,7 +149,7 @@ window#waybar.hidden {
 
 #backlight {
   /*color: #8a909e;*/
-  margin-right: 0px;
+  /*margin-right: 0px;*/
 }
 
 #network {
