@@ -215,10 +215,11 @@ bar {
     swaybar_command waybar
 }
 ####################### RAJI ##########################
-gaps top   10
-gaps left  10
-gaps right 10
-gaps bottom 10
+#gaps top   10
+#gaps left  10
+#gaps right 10
+#gaps bottom 10
+gaps inner 5
 default_border none
 default_floating_border none
 titlebar_padding 1

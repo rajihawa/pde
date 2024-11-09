@@ -1,45 +1,52 @@
 {
     "layer": "top",
     "position": "top",
-    "margin-top": 10,
-    "margin-left": 5,
-    "margin-right": 5,
+    "margin-top": 0,
+    "margin-left": 0,
+    "margin-right": 0,
     "height": 0,
     "spacing": 0,
     "modules-left": [
-		"clock",
+        "network",
+		"cpu",
+		"memory",
         "sway/workspaces",
 		"mpris",
-		"mpd"
+		"mpd",
     ],
     "modules-center": [
+		"sway/window",
     ],
     "modules-right": [
-        "network",
 		"backlight",
-        "battery",
 		"pulseaudio",
-		"cpu",
-		"memory"
+        "battery",
+		"temperature",
+		"clock",
     ],
-    "wlr/taskbar": {
-        "format": "{icon}",
-        "on-click": "activate",
-        "on-click-right": "fullscreen",
-        "icon-theme": "WhiteSur",
-        "icon-size": 25,
-        "tooltip-format": "{title}"
-    },
+	"sway/window": {
+		"format": "{title}",
+		"max-length": 50,
+    	"rewrite": {
+			"(.*) — Mozilla Firefox": "  $1",
+			"(.*)@thinkpad:(.*)" : "  $2"
+    	}
+	},
+	"temperature": {
+		"critical-threshold": 70,
+    	"format": " {temperatureC}°C",
+    	"tooltip": false
+	},
     "backlight": {
         // "device": "acpi_video1",
         "format": "{icon} {percent}%",
         "format-icons": ["", "", "", "", "", "", "", "", ""]
     },
     "sway/workspaces": {
-        "on-click": "activate",
+        "disable-click": true,
 		"disable-scroll": true,
     	"all-outputs": true,
-        "format": "{icon}"
+        "format": "{index}"
     }, 
     "memory": {
         "interval": 5,
@@ -51,9 +58,6 @@
         "format": " {}%",
         "max-length": 10
     },
-    "tray": {
-        "spacing": 10
-    },
     "clock": {
         //"tooltip-format": "<tt>{calendar}</tt>",
         "format-alt": " {:%a, %Y/%m/%d}",
@@ -62,14 +66,14 @@
         "format": " {:%H:%M}"
     },
     "network": {
-        "format-wifi": "{icon} {essid}",
-        "format-disconnected": "Disconnected ⚠",
+        "format-wifi": "{icon} ",
+        "format-disconnected": "⚠ Disconnected",
         "format-icons": [
-            "󰤯 ",
-            "󰤟 ",
-            "󰤢 ",
-            "󰤥 ",
-            "󰤨 "
+            "󰤯",
+            "󰤟",
+            "󰤢",
+            "󰤥",
+            "󰤨"
         ],
         "tooltip-format-disconnected": "Disconnected",
         "tooltip-format-wifi": "{icon} {essid}\n⇣{bandwidthDownBytes}  ⇡{bandwidthUpBytes}",
@@ -82,7 +86,7 @@
     "pulseaudio": {
         "format": "{icon}{volume}%",
         "format-bluetooth": "󰂰 {volume}%",
-        "nospacing": 1,
+        "nospacing": 1, 
         "tooltip-format": "Volume: {volume}%",
         "format-muted": "󰝟 muted",
         "format-icons": {
@@ -93,13 +97,12 @@
                 "󰕾 "
             ]
         },
-        "on-click": "pavucontrol",
+        //"on-click": "pavucontrol",
         "scroll-step": 1
     },
     "battery": {
         "format": "{icon} {capacity}%",
 		"format-alt": "{icon} {time}",
-		"tooltip": false,
         "format-icons": {
             "charging": [
                 "󰢜",
