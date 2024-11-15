@@ -1,54 +1,72 @@
-window {
-margin: 0px;
-border: 2px solid #eb6f92;
-background-color: #080808;
-color: #e0def4;
-    font-family: 'Monofur Nerd Font';
-    font-size: 20px;
+@define-color base            #191724;
+@define-color surface         #1f1d2e;
+@define-color overlay         #26233a;
+
+@define-color muted           #6e6a86;
+@define-color subtle          #908caa;
+@define-color text            #e0def4;
+
+@define-color love            #eb6f92;
+@define-color gold            #f6c177;
+@define-color rose            #ebbcba;
+@define-color pine            #31748f;
+@define-color foam            #9ccfd8;
+@define-color iris            #c4a7e7;
+
+@define-color highlightLow    #21202e;
+@define-color highlightMed    #403d52;
+@define-color highlightHigh   #524f67;
+
+#window {
+  margin: 0px;
+  border: 0px solid #eb6f92;
+  background-color: @overlay;
+  color: @text;
+  font-family: Material Design Icons, Hack Nerd Font; 
+  font-size: 16px;
+  border-radius: 8px;
 }
 
 #input {
-margin: 15px;
-border: 1px solid #303030;
-color: #c6c6c6;
-background-color: #303030;
+	padding: 5px;
+	margin-bottom: 10px;
+	outline: none;	
+	color: @text;
+	background-color: @overlay;
+	border-radius: 8px;
+	border: 1px solid @rose;
+	font-size: 16px;
 }
 
 #input image {
-	color: #303030;
+	color: @rose;
 }
 
 #inner-box {
-margin: 5px;
-border: none;
-padding-left: 10px;
-padding-right: 10px;
-background-color: #080808;
+	border-radius: 8px;
 }
 
 #outer-box {
-margin: 5px;
-border: none;
-background-color: #080808;
+	padding: 10px;
+	border-radius: 8px;
 }
 
 #scroll {
-margin: 0px;
-border: none;
+  margin: 0px;
+
+  border-radius: 8px;
 }
 
 #text {
 margin: 5px;
-border: none;
-color: #c6c6c6;
 } 
 
 #entry:selected {
-	background-color: #eb6f92;
+	border-radius: 8px;
+	background-color: @rose;
 }
 
 #text:selected {
-	background-color: ##eb6f92;
 	color: #232136;
 	font-weight: normal;
 }

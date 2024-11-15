@@ -24,13 +24,13 @@
 
 
 * {
-  font-family: Material Design Icons, JetBrainsMono Nerd Font;
-  font-size: 20px;
+  font-family: Material Design Icons, Hack Nerd Font;
+  font-size: 16px;
   font-weight: bolder;
 }
 
 window#waybar {
-  background: @base;
+  background: @overlay;
   color: @text;
 }
 
@@ -55,13 +55,11 @@ window#waybar.hidden {
 #mpris{
   border-radius: 4px;
   padding: 0px 5px;
-  background-color: @overlay;
   color: @rose;
   margin: 5px;
 }
 
 #workspaces {
-  background-color: @base;
 }
 #workspaces button {
   border: none;

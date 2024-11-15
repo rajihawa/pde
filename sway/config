@@ -215,13 +215,19 @@ bar {
     swaybar_command waybar
 }
 ####################### RAJI ##########################
+# window decorations
+# class			        border	    background	text        indicator   child_border
+client.focused          #ebbcba     #191724     #e0def4     #ebbcba     #ebbcba
+client.focused_inactive #ebbcba     #191724     #e0def4     #ebbcba     #ebbcba
+client.unfocused        #26233a     #191724     #e0def4     #26233a     #26233a
 #gaps top   10
 #gaps left  10
 #gaps right 10
 #gaps bottom 10
-gaps inner 5
-default_border none
-default_floating_border none
+gaps inner 0
+default_border pixel 2
+smart_borders on
+default_floating_border pixel 2
 titlebar_padding 1
 titlebar_border_thickness 0
 
