@@ -69,9 +69,9 @@
     "max-length": 10
   },
   "clock": {
-    "format-alt": "  {:%a, %Y/%m/%d}",
+    "format-alt": " {:%a, %Y/%m/%d}",
     "tooltip": false,
-    "format": "  {:%H:%M}"
+    "format": " {:%H:%M}"
   },
   "network": {
     "format-wifi": "{icon} ",

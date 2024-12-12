@@ -16,6 +16,9 @@ vim.opt.showmode = false
 -- Enable break indent
 vim.opt.breakindent = true
 
+vim.opt.tabstop = 4
+vim.opt.shiftwidth = 4
+
 -- Save undo history
 vim.opt.undofile = true
 
@@ -514,6 +517,10 @@ require("lazy").setup({
 				go = { "gofmt" },
 				json = { "jq" },
 				jsonc = { "jq" },
+				html = {
+					"djlint",
+					args = { "--profile=golang" },
+				},
 			},
 		},
 	},
